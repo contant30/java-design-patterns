@@ -5,11 +5,12 @@ import java.util.Optional;
 
 import fr.diginamic.tp_grasps.beans.TypeReservation;
 
-public class TypeReservationDao {
+public class TypeReservationDao implements ITypeReservationDao {
 	
 	private static TypeReservation[] types = {new TypeReservation("TH", 150.0, 15.0), new TypeReservation("CI", 10.9, 0.0)};
 	
-	public TypeReservation extraireTypeReservation(String type) {
+	@Override
+    public TypeReservation extraireTypeReservation(String type) {
 		
 		Optional<TypeReservation> opt = List.of(types).stream().filter(t->t.getType().equals(type)).findAny();
 		if (opt.isPresent()) {
