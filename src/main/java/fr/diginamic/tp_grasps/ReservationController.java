@@ -28,8 +28,6 @@ public class ReservationController {
 
     private ReservationService reservationService = new ReservationService();
 
-    private IReservationFactory
-	
 	/** Méthode qui créée une réservation pour un client à partir des informations transmises
 	 * @param params contient toutes les infos permettant de créer une réservation
 	 * @return Reservation
