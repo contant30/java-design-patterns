@@ -2,16 +2,20 @@ package fr.factory;
 
 public enum Unite {
 
-    MICRO(0.000001),
-    MILLI(0.001);
+    MICRO("Micro"),
+    MILLI("Milli");
 
-    private final double facteur;
+    private String libelle;
 
-    Unite(double facteur) {
-        this.facteur = facteur;
+    Unite(String libelle) {
+        this.libelle = libelle;
     }
 
-    public double getFacteur() {
-        return facteur;
+    public String getLibelle() {
+        return libelle;
+    }
+
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
     }
 }
