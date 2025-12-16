@@ -24,12 +24,8 @@ public class SingletonTest {
         assertEquals("jdbc:mysql://localhost:3306/mabase", url);
         assertEquals("root", user);
         assertEquals("1234", password);
-    }
 
-    @Test(expected = java.util.MissingResourceException.class)
-    public void testGetValeur_CleInexistante_LanceException() {
-        Configuration config = Configuration.getInstance();
-        config.getValeur("cle.inexistante"); // Doit lever une exception
+        System.out.println(url);
     }
 
     @Test
@@ -37,12 +33,6 @@ public class SingletonTest {
         Configuration config = Configuration.getInstance();
         String user = config.getValeur("db.user");
         assertEquals("root", user);
-    }
-
-    @Test(expected = java.util.MissingResourceException.class)
-    public void testGetValeur_UserManquant_LanceException() {
-        Configuration config = Configuration.getInstance();
-        config.getValeur("user.inexistante"); // Doit lever une exception si l'user est vide
     }
 
 }

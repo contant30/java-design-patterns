@@ -1,23 +1,29 @@
 package fr.diginamic.singleton;
 
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class Configuration {
 
     private static final Configuration SINGLETON = new Configuration();
 
-    private ResourceBundle configuration;
+    private HashMap<String, String> stockage = new HashMap<>();
 
     // Constructeur
     private Configuration() {
-        configuration = ResourceBundle.getBundle("configuration");
+        ResourceBundle res = ResourceBundle.getBundle("configuration");
+        for (String cle : res.keySet()){
+            String valeur = res.getString(cle);
+            stockage.put(cle, valeur);
+        }
     }
 
-        public static Configuration getInstance() {
+
+    public static Configuration getInstance() {
         return SINGLETON;
     }
 
-    public String getValeur(String key) {
-        return configuration.getString(key);
+    public String getValeur(String cle) {
+        return stockage.get(cle);
     }
 }
