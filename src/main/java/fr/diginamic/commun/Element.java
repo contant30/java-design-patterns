@@ -1,4 +1,4 @@
-package fr.factory;
+package fr.diginamic.commun;
 
 public class Element {
 

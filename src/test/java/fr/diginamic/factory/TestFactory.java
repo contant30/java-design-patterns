@@ -1,12 +1,12 @@
 package fr.diginamic.factory;
 
-import fr.factory.type.Additif;
-import fr.factory.type.Allergene;
-import fr.factory.Element;
+import fr.diginamic.commun.Additif;
+import fr.diginamic.commun.Allergene;
+import fr.diginamic.commun.Element;
 import fr.factory.ElementFactory;
-import fr.factory.type.Ingredient;
-import fr.factory.TypeElement;
-import fr.factory.Unite;
+import fr.diginamic.commun.Ingredient;
+import fr.diginamic.commun.TypeElement;
+import fr.diginamic.commun.Unite;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,7 +1,4 @@
-package fr.factory.type;
-
-import fr.factory.Element;
-import fr.factory.Unite;
+package fr.diginamic.commun;
 
 public class Additif extends Element {
 

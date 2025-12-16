@@ -1,11 +1,10 @@
-package fr.factory.type;
-
-import fr.factory.Element;
-import fr.factory.Unite;
+package fr.diginamic.commun;
 
 public class Ingredient extends Element {
 
     public Ingredient(String nom, double valeur, Unite unite) {
         super(nom, valeur, unite);
     }
+
+
 }

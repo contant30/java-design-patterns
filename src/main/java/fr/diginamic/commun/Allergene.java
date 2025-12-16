@@ -1,11 +1,9 @@
-package fr.factory.type;
-
-import fr.factory.Element;
-import fr.factory.Unite;
+package fr.diginamic.commun;
 
 public class Allergene extends Element {
 
     public Allergene(String nom, double valeur, Unite unite) {
         super(nom, valeur, unite);
     }
+
 }

@@ -1,13 +1,16 @@
 package fr.factory;
 
-import fr.factory.type.Additif;
-import fr.factory.type.Allergene;
-import fr.factory.type.Ingredient;
+import fr.diginamic.commun.Additif;
+import fr.diginamic.commun.Allergene;
+import fr.diginamic.commun.Element;
+import fr.diginamic.commun.Ingredient;
+import fr.diginamic.commun.TypeElement;
+import fr.diginamic.commun.Unite;
 
 public class ElementFactory {
 
 
-    public static Element getInstance(TypeElement type,String nom,double valeur,Unite unite) {
+    public static Element getInstance(TypeElement type, String nom, double valeur, Unite unite) {
 
         switch (type) {
 
