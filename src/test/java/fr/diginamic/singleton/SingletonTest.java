@@ -11,6 +11,7 @@ public class SingletonTest {
     public void testGetInstance_RetourneToujoursLaMemeInstance() {
         Configuration config1 = Configuration.getInstance();
         Configuration config2 = Configuration.getInstance();
+
         assertSame(config1, config2); // Vérifie que c'est bien la même instance
     }
 
@@ -32,6 +33,7 @@ public class SingletonTest {
     public void testGetValeur_DbUser_RetourneRoot() {
         Configuration config = Configuration.getInstance();
         String user = config.getValeur("db.user");
+
         assertEquals("root", user);
     }
 
